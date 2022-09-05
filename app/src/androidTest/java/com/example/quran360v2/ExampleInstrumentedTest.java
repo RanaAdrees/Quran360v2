@@ -1,4 +1,4 @@
-package com.example.quran360;
+package com.example.quran360v2;
 
 import android.content.Context;
 

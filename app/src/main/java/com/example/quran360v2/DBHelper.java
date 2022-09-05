@@ -1,4 +1,4 @@
-package com.example.quran360;
+package com.example.quran360v2;
 
 import android.content.Context;
 import android.database.Cursor;
@@ -13,7 +13,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Locale;
 
 public class DBHelper extends SQLiteOpenHelper {

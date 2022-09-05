@@ -1,4 +1,4 @@
-package com.example.quran360;
+package com.example.quran360v2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,8 +6,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ListView;
 
+import com.example.quran360v2.R;
+
 import java.util.ArrayList;
-import java.util.List;
 
 public class AyahList extends AppCompatActivity {
 
@@ -21,7 +22,7 @@ public class AyahList extends AppCompatActivity {
         DBHelper dbhelper=new DBHelper(this);
 
         ArrayList<GenericListItem> SurahList=dbhelper.displayAyah(dbhelper.getSurahNumber(surahName));
-
+//ee
 
 
 //        ArrayList<String> AANList;

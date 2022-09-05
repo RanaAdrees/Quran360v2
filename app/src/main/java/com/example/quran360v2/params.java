@@ -1,4 +1,4 @@
-package com.example.quran360;
+package com.example.quran360v2;
 
 public class params {
     public static final String DB_NAME="QuranDb.db";

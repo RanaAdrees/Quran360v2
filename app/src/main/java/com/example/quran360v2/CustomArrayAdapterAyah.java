@@ -1,4 +1,4 @@
-package com.example.quran360;
+package com.example.quran360v2;
 
 import android.app.Activity;
 import android.view.LayoutInflater;
@@ -8,7 +8,6 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class CustomArrayAdapterAyah extends ArrayAdapter {
     Activity context;
