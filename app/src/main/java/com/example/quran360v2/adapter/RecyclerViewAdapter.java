@@ -1,6 +1,8 @@
 package com.example.quran360v2.adapter;
 
 import android.content.Context;
+import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,14 +12,17 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.quran360v2.AyahList;
 import com.example.quran360v2.GenericListItem;
 import com.example.quran360v2.R;
+import com.example.quran360v2.SurahList;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> {
     private Context context;
-    private ArrayList<GenericListItem> genericListItems;
+    private List<GenericListItem> genericListItems;
 
     public RecyclerViewAdapter(Context context, ArrayList<GenericListItem> genericListItems) {
         this.context = context;
@@ -35,8 +40,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public void onBindViewHolder(@NonNull RecyclerViewAdapter.ViewHolder holder, int position) {
         GenericListItem genericListItem=genericListItems.get(position);
-        holder.surahA.setText(genericListItem.getFirstEntity());
-        holder.surahE.setText(genericListItem.getSecendEntity());
+        holder.suraha.setText(genericListItem.getSecendEntity());
+        holder.surahe.setText(genericListItem.getFirstEntity());
     }
 
     @Override
@@ -57,8 +62,16 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
         @Override
         public void onClick(View view) {
-            TextView name= view.findViewById(R.id.contactName);
-            Toast.makeText(context, "ContactName:"+name.getText(), Toast.LENGTH_SHORT).show();
+           // Log.i("Clicked on list:",String.valueOf(position));
+            Intent intent=new Intent(context, AyahList.class);
+            TextView text=(TextView)view.findViewById(R.id.surahA);
+
+            String surahName = text.getText().toString();
+            //String selectedFromList = (String) (surahList.getItemAtPosition(i));
+            Log.i("Itemmm String::>:",surahName);
+
+            intent.putExtra("SurahName", surahName);
+            context.startActivity(intent);
 
         }
     }

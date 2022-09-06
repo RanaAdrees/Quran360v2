@@ -7,16 +7,17 @@
     tools:context=".SurahList">
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/surahList"
         android:layout_width="413dp"
-        android:layout_height="767dp"
+        android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="393dp"
-        android:layout_height="118dp"
+        android:layout_width="399dp"
+        android:layout_height="83dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,8 +25,8 @@
 
         <EditText
             android:id="@+id/searchField"
-            android:layout_width="329dp"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_margin="20dp"
             android:ems="10"
             android:hint="Surah name"
