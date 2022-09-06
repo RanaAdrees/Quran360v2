@@ -27,9 +27,11 @@ public class SurahList extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_surah_list);
+
         recyclerView=findViewById(R.id.surahList);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
         searchField=findViewById(R.id.searchField);
         DBHelper dbhelper=new DBHelper(this);
 //        ArrayList<String> SANList;
