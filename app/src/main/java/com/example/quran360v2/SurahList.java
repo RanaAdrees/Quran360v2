@@ -62,7 +62,7 @@ public class SurahList extends AppCompatActivity {
                         Log.i("Text change",searchField.getText().toString());
                 ArrayList<GenericListItem> SurahList2;
                 SurahList2=dbhelper.surahFilter(searchField.getText().toString());
-                recyclerViewAdapter=new RecyclerViewAdapter(SurahList.this,SurahList);
+                recyclerViewAdapter=new RecyclerViewAdapter(SurahList.this,SurahList2);
                 recyclerView.setAdapter(recyclerViewAdapter);
 
             }
